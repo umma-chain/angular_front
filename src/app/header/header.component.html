@@ -167,7 +167,7 @@
                             class="dust-button__inner"><span
                                 class="header__button-content">Регистрация</span></span></button></a>
                 <div class="header__container-language-switcher">
-                    <button type="button" (click)="onHide()" dust-button-filled color="cancel-transparent"
+                    <button #langButton type="button" (click)="clickout() dust-button-filled color="cancel-transparent"
                         class="dust-button header__button header__button--language-switcher dust-button-filled dust-button--cancel-transparent dust-button--medium">
                         <span
                             class="dust-button__inner">
@@ -175,7 +175,7 @@
                             <span class="header__button-content">Рус</span>
                         </span>
                         </button>
-                    <div *ngIf="languageShow" class="header__popup-language">
+                    <div *ngIf="isComponentClicked" class="header__popup-language">
                         <div class="header__popup-language-item active"> Русский </div>
                         <div class="header__popup-language-item"> Українська </div>
                         <div class="header__popup-language-item"> English </div>
